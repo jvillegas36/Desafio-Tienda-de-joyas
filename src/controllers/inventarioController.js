@@ -35,9 +35,9 @@ export const inventarioFilter = async(req, res)=>{
     try {
         const filters = req.query
         const result = await getFiltroModel(filters)
-        res.status(200).json({travel: result})
+        res.status(200).json(result)
     } catch (error) {
-                 res.status(500).send({error:'Error al procesar la solicitud'})
-         console.error('Error =>', error)
+        res.status(500).send({error:'Error al procesar la solicitud'})
+        console.error('Error =>', error)
     }
 }
